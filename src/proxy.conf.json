@@ -1,0 +1,7 @@
+{
+    "/api/*": {
+      "target": "https://my-worker.anantha1996sn.workers.dev",
+      "secure": false,
+      "logLevel": "debug"
+    }
+  }

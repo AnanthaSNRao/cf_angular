@@ -1,0 +1,22 @@
+<div>
+    <div>
+        <div>
+            <br>
+            <button (click)="createPost()">Create Post</button>
+        </div>
+        <div *ngIf="visible">
+            <div>
+                <label>Drop the image for your Post   </label>
+                <input id="image" type="file" (change)="fileChanged($event)" accept="image/*">
+            </div>
+            <div>
+                <label>Write something on your mind   </label>
+                <input [(ngModel)]="des" id="des" type="text">
+            </div>
+            <div>
+                <button mat-button (click)="create()">Create</button>
+                <button mat-button (click)="cancel()">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -10,7 +10,7 @@ export class PostService {
   constructor(private http: HttpClient) { }
 
   getAllPosts(){
-    return this.http.get<Array<Post>>('https://my-worker.anantha1996sn.workers.dev/post/getAll')
+    return this.http.get<Array<Post>>('https://my-worker.anantha1996sn.workers.dev/posts')
   }
   getPost(id: number){
     return this.http.get<Post>(`https://my-worker.anantha1996sn.workers.dev/post/get/${id}`)
@@ -19,7 +19,7 @@ export class PostService {
     return this.http.get<Object>(`https://my-worker.anantha1996sn.workers.dev/assets/i${id}`)
   }
   savePost(content :Object){
-    return this.http.post<Array<Post>>('https://my-worker.anantha1996sn.workers.dev/post',content)
+    return this.http.post<Array<Post>>('https://my-worker.anantha1996sn.workers.dev/posts',content)
   }
   postImage(content: any){
     return this.http.post(`https://my-worker.anantha1996sn.workers.dev/image`,content)
